@@ -28,7 +28,7 @@ public class T01_ContactListApplication {
         signInPage = new CLSignInPage();
         contactPage = new CLContactListPage();
 
-        // Create a new user account (only once)
+        // Create a new user account
         homePage.signUp.click(); Thread.sleep(3000);
         signInPage.fName.sendKeys("SDA3010-Dina");
         signInPage.lNAme.sendKeys("Abdulaziz");
@@ -38,7 +38,7 @@ public class T01_ContactListApplication {
         Thread.sleep(5000);
 
 
-        // Assert successful registration by checking if logout button is displayed
+        // Assert successful registration
         Assert.assertTrue(contactPage.logout.isDisplayed(), "User registration failed");
         contactPage.logout.click();
 
@@ -54,7 +54,7 @@ public class T01_ContactListApplication {
                                     String phone, String street1, String street2, String city,
                                     String stateProvince, String postalCode, String country) throws InterruptedException {
 
-        // Add one contact per DataProvider row
+
         Thread.sleep(1000);
         contactPage.addContact.click();
         signInPage.fName.sendKeys(fName);
@@ -71,14 +71,14 @@ public class T01_ContactListApplication {
         contactPage.submit.click();
 
         Thread.sleep(1000);
-        // Assert that the added contact appears in the contact list
+
         Assert.assertTrue(contactPage.getContactByEmail(email).isDisplayed(),
                 "Contact " + email + " was not added successfully");
     }
 
     @AfterClass
     void tearDown() throws InterruptedException {
-        // Assert total contacts equals 5 (from your DataProvider)
+
         Assert.assertEquals(contactPage.getAllContacts().size(), 5,
                 "Total contact count does not match expected 5");
 
