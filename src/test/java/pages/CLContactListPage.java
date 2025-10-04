@@ -50,7 +50,7 @@ public class CLContactListPage {
     public List<WebElement> getAllContacts() {
 
         return Driver.getDriver().findElements(
-                By.cssSelector("#myTable>tbody>tr.contactTableBodyRow")
+                By.cssSelector("#myTable tr.contactTableBodyRow")
         );
     }
 

@@ -32,7 +32,7 @@ public class T01_ContactListApplication {
         homePage.signUp.click(); Thread.sleep(3000);
         signInPage.fName.sendKeys("SDA3010-Dina");
         signInPage.lNAme.sendKeys("Abdulaziz");
-        homePage.email.sendKeys("Dina@test14.com");
+        homePage.email.sendKeys("Dina@test15.com");
         homePage.password.sendKeys("1234567");
         homePage.submit.click();
         Thread.sleep(5000);
@@ -43,7 +43,7 @@ public class T01_ContactListApplication {
         contactPage.logout.click();
 
         // Login with created user
-        homePage.email.sendKeys("Dina@test14.com");
+        homePage.email.sendKeys("Dina@test15.com");
         homePage.password.sendKeys("1234567");
         homePage.submit.click();
         Thread.sleep(3000);

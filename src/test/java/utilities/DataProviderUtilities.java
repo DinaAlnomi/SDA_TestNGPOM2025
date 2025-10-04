@@ -36,6 +36,27 @@ public class DataProviderUtilities {
         };
     }
 
+    @DataProvider
+    public Object[][] getRecordsBP() {
+        return new Object[][]{
+                {"john", "doe", "10001"},
+                {"mary", "star", "90012"},
+                {"tom", "hawk","60605"},
+                {"tim", "lee", "77002"},
+                {"ken", "joe", "33101"}
+        };
+    }
+
+    @DataProvider
+    public Object[][] getRecordsRW() {
+        return new Object[][]{
+                {"john", "40", 1},
+                {"mary", "55", 2},
+                {"tom", "23",3},
+                {"tim", "45", 4},
+                {"ken", "36", 5}
+        };
+    }
 
     @DataProvider(name = "faker")
     public Object[][] getFakeRecords() {

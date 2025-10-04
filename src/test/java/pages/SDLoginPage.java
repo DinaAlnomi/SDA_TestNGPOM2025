@@ -20,15 +20,23 @@ public class SDLoginPage {
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
-
-
-    public void login(String username, String password){
+    public void enterUsername(String username) {
         this.username.sendKeys(username);
+    }
+
+    public void enterPassword(String password) {
         this.password.sendKeys(password);
+    }
+
+    public void clickLoginButton() {
         loginButton.click();
     }
 
-
+    public void login(String username, String password) {
+        enterUsername(username);
+        enterPassword(password);
+        clickLoginButton();
+    }
 
 
 }
